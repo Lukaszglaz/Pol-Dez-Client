@@ -1,1 +1,11 @@
+// Styles Base Colors
+@import "./baseStyles/baseColors";
+
+// Styles Basic
+@import "./baseStyles/baseStyles";
+
+// Styles Home Page
 @import "./views/home";
+
+// Styles Header Components
+@import "./views/header";
