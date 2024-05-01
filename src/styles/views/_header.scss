@@ -206,7 +206,7 @@ body {
           border-radius: 4px;
           font-weight: 600;
           margin: 0 10px;
-          width: 130px;
+          width: 140px;
           padding: 10px 0px;
           box-shadow: 0 0 20px rgba(104, 85, 224, 0.2);
           transition: 0.4s;
@@ -229,7 +229,9 @@ body {
     }
 
     #check:checked ~ .navbar {
-      height: 18.9rem;
+      height: calc(100vh - 100px);
+      // border: 1px solid red;
+      margin-bottom: 20px;
     }
 
     #check:checked ~ .navbar a {
