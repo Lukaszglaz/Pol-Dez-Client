@@ -4,9 +4,18 @@
   bottom: 0px;
   width: 100%;
   background-color: #f8f9fa;
-  padding: 20px 0;
+  padding: 10px 0;
   text-align: center;
   color: #000;
+  .container__correct_ft {
+    margin-bottom: 1.5rem;
+    @media (min-width: 1000px) {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+
   div {
     margin-bottom: 10px;
   }

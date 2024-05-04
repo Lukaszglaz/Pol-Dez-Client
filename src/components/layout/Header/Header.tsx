@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export const Header = () => {
   return (
@@ -22,8 +22,12 @@ export const Header = () => {
           </NavLink>
           <NavLink to="/about-us">O Projekcie</NavLink>
           <div className="container__btn_log">
-            <button className="login__btn">Zaloguj się</button>
-            <button className="register__btn">Zarejestruj się</button>
+            <Link className="login__btn btn__login" to="/login">
+              Zaloguj się
+            </Link>
+            <Link className="register__btn btn__signup" to="/sign-up">
+              Zarejestruj się
+            </Link>
           </div>
         </nav>
       </header>
