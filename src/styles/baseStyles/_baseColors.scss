@@ -4,3 +4,10 @@ $standard-anim-a: #c7c7c7;
 $bg-checked-text: #191919;
 $header-anim-line: rgba(28, 212, 226, 0.4);
 $font-default: rgba(104, 85, 224, 1);
+$boxes-bg-gradient: linear-gradient(
+  to bottom right,
+  rgba(255, 255, 255, 0.05),
+  rgba(255, 255, 255, 0.1)
+);
+
+$bg-hover-color-light-purple: rgba(150, 70, 200, 1);
