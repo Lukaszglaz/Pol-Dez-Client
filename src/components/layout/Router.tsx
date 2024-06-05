@@ -7,6 +7,7 @@ import { SignUp } from "../../views/SignUp/SignUp";
 import { ForgotPassword } from "../../views/ForgotPassword/ForgotPassword";
 import { PageNotFound } from "../../views/PageNotFound/PageNotFound";
 import { ProtectedRoutes } from "../ProtectedRoutes";
+import { CompleteSignUp } from "../../views/CompleteSignUp/CompleteSignUp";
 
 export const Router = () => (
   <Routes>
@@ -20,6 +21,7 @@ export const Router = () => (
     <Route path="/login" element={<Login />} />
     <Route path="/sign-up" element={<SignUp />} />
     <Route path="/forgot-password" element={<ForgotPassword />} />
+    <Route path="/complete-signup" element={<CompleteSignUp />} />
 
     <Route path="*" element={<PageNotFound />} />
   </Routes>

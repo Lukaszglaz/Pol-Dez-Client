@@ -43,9 +43,9 @@ export const Home = () => {
             </div>
           </div>
           <h3>
-            Zapraszamy do korzystania z aplikacji <br /> Polska Dezerter - Clash
-            of Clans <br />i dołączania do naszego klanu w walce o dominację w
-            świecie Clash of Clans!
+            Zapraszamy do korzystania z aplikacji <br />
+            <span>Polska Dezerter - Clash of Clans</span>i dołączania do naszego
+            klanu w walce o dominację w świecie Clash of Clans!
           </h3>
         </section>
       </main>

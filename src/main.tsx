@@ -1,13 +1,16 @@
-import React from "react";
+// import React from "react";
 import ReactDOM from "react-dom/client";
 import { App } from "./components/App.tsx";
 import "./styles/index.scss";
 import { BrowserRouter } from "react-router-dom";
+import { UserProvider } from "./contexts/user.context.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <BrowserRouter>
+  // <React.StrictMode>
+  <BrowserRouter>
+    <UserProvider>
       <App />
-    </BrowserRouter>
-  </React.StrictMode>
+    </UserProvider>
+  </BrowserRouter>
+  /* </React.StrictMode> */
 );

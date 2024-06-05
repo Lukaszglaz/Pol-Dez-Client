@@ -1,9 +1,10 @@
+import { SignupProvider } from "../../contexts/signup.context";
+import { SignUpContent } from "./SignUpContent";
+
 export const SignUp = () => {
   return (
-    <>
-      <div>
-        <p>SignUp</p>
-      </div>
-    </>
+    <SignupProvider>
+      <SignUpContent />
+    </SignupProvider>
   );
 };
