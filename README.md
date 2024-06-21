@@ -16,6 +16,8 @@
 - **Registration Panel**: Enables new users to create an account
 - **Game Progress Panel** (coming soon): Will display the current progress of users in Clash of Clans
 
+## Backend
 
+The backend for this application can be found at: [Polska Dezerter Backend](https://github.com/Lukaszglaz/Pol-Dez-Server)
 
 
