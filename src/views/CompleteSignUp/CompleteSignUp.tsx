@@ -5,7 +5,6 @@ export const CompleteSignUp = () => {
     <>
       <div>
         <p>Brawo zarejestrowałeś się poprawnie</p>
-        linkTo
         <Link to="/login">Przejdź do zalogowania się</Link>
       </div>
     </>

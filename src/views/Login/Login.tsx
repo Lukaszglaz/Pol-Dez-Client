@@ -1,15 +1,34 @@
 import { FormEvent, useState } from "react";
 import { IoEye, IoEyeOff } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { Method } from "../../types";
+import { toast } from "react-toastify";
+import { useUser } from "../../contexts/user.context";
+import { setLocalStorage } from "../../utils/localStorage";
+import { LoginResponse } from "../../types/auth";
+import { callApi } from "../../utils/api";
 export const Login = () => {
+  const { setUser } = useUser();
+
+  const navigate = useNavigate();
   const [isVisible, isSetVisible] = useState(false);
 
   const [form, setForm] = useState({ email: "", password: "" });
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
-    console.log(form);
+    const response = await callApi<LoginResponse>("auth/login", Method.Post, {
+      email: form.email,
+      password: form.password,
+    });
+
+    if (!response.status) return toast.error(response.message);
+
+    setUser(response.results.user);
+    setLocalStorage("token", response.results.token);
+
+    navigate("/panel");
   };
 
   return (

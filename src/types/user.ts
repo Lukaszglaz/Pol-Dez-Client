@@ -6,3 +6,13 @@ export interface CreateUserRequest {
   confirmPassword: string;
   playerTag: string;
 }
+
+export interface LoginRequest {
+  email: string;
+  password: string;
+}
+
+export enum UserRole {
+  User = "User",
+  Admin = "Admin",
+}

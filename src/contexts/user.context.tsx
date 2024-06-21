@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import {
   Dispatch,
   ReactNode,
@@ -7,9 +8,13 @@ import {
   useEffect,
   useState,
 } from "react";
+import { callApi } from "../utils/api";
+import { toast } from "react-toastify";
 
-interface UserResponse {
+export interface UserResponse {
   role: Role;
+  id: string;
+  name: string;
 }
 
 interface UserContextValue {
@@ -32,18 +37,13 @@ interface Props {
 
 export const UserProvider = ({ children }: Props) => {
   const [user, setUser] = useState<UserResponse | null>(null);
-  console.log(user);
 
   useEffect(() => {
     (async () => {
-      try {
-        const response = await fetch("http://localhost:3001/auth/is-logged");
-        console.log(response);
-        const results = (await response.json()) as UserResponse;
-        setUser(results);
-      } catch (error) {
-        console.log(error);
-      }
+      const response = await callApi<UserResponse>("auth/is-logged");
+      if (!response.status) return toast.error(response.message);
+
+      setUser(response.results);
     })();
   }, []);
 

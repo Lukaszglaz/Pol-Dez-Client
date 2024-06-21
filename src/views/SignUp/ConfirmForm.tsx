@@ -2,6 +2,7 @@ import { FormEvent } from "react";
 import { Step, useSignup } from "../../contexts/signup.context";
 import { Link, useNavigate } from "react-router-dom";
 import { CreateUserRequest } from "../../types";
+import { toast } from "react-toastify";
 
 export const ConfirmForm = () => {
   const { signup, setSignup } = useSignup();
@@ -19,6 +20,12 @@ export const ConfirmForm = () => {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
+    if (signup.isConfirmTerms === false) {
+      toast.error("Pole () nie zostało zaznaczone");
+
+      return;
+    }
+
     const response = await fetch("http://localhost:3001/user", {
       body: JSON.stringify({
         confirmPassword: signup.confirmPassword,
@@ -33,12 +40,9 @@ export const ConfirmForm = () => {
         "Content-Type": "application/json",
       },
     });
-    const results = await response.json();
-
+    // Mozna to zastąpić toastify chodzi o /complete-signup a za to zmaienic sciezke na /login i wyzej uzyc toastify
     // Przenoszenie po rejestracji na potwierdzenie loginu
     if (response.ok) return navigate("/complete-signup");
-
-    console.log(results.message());
   };
   return (
     <>

@@ -1,6 +1,6 @@
 import { FormEvent } from "react";
 import { Step, useSignup } from "../../contexts/signup.context";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export const PlayerForm = () => {
@@ -34,7 +34,6 @@ export const PlayerForm = () => {
     <>
       <div className="container__main_correct">
         <form onSubmit={handleSubmit}>
-          <ToastContainer />
           <h2 className="signup__title">Zarejestruj konto</h2>
 
           <label className="signup__label label__player_tag">
