@@ -9,7 +9,6 @@ import {
   useState,
 } from "react";
 import { callApi } from "../utils/api";
-import { toast } from "react-toastify";
 
 export interface UserResponse {
   role: Role;
@@ -41,9 +40,9 @@ export const UserProvider = ({ children }: Props) => {
   useEffect(() => {
     (async () => {
       const response = await callApi<UserResponse>("auth/is-logged");
-      if (!response.status) return toast.error(response.message);
-
-      setUser(response.results);
+      if (response.status) {
+        setUser(response.results);
+      }
     })();
   }, []);
 

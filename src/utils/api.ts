@@ -23,9 +23,15 @@ export async function callApi<T>(
     });
 
     const result = await response.json();
+    if (response.ok) {
+      return {
+        ...result,
+        status: true,
+      };
+    }
     return {
-      ...result,
-      status: true,
+      status: false,
+      message: result.message,
     };
   } catch (error) {
     return {
