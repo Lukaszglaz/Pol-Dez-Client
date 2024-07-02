@@ -13,3 +13,12 @@ body {
   color: #fff;
   position: relative;
 }
+
+.Toastify__toast {
+  &-icon {
+    margin-right: 15px;
+  }
+  .Toastify__close-button {
+    max-width: 100px;
+  }
+}
