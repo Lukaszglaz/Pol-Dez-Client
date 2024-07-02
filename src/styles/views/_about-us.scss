@@ -1,0 +1,75 @@
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  //   background-color: #fff;
+
+  span {
+    font-weight: bold;
+    color: $font-default;
+  }
+  h1 {
+    margin: 0;
+    font-size: 36px;
+    color: $font-default;
+  }
+  p {
+    font-size: 18px;
+    margin-top: 15px;
+    line-height: 25.4px;
+  }
+  .content {
+    padding: 20px;
+  }
+  .section {
+    margin-bottom: 40px;
+    h2 {
+      font-size: 28px;
+      color: $font-default;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      a {
+        color: $font-default;
+        margin-left: 10px;
+      }
+    }
+    .team {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      .team-member {
+        flex: 1 1 30%;
+        margin: 20px;
+        text-align: center;
+        img {
+          margin: 10px 0 5px;
+          font-size: 20px;
+          color: $font-default;
+        }
+        h3 {
+          margin: 10px 0 5px;
+          font-size: 20px;
+          color: $font-default;
+        }
+        p {
+          font-size: 14px;
+          color: #666;
+        }
+      }
+    }
+  }
+}
+
+span,
+p,
+h2,
+h3,
+a,
+h1 {
+  &::selection {
+    background-color: $bg-checked-text;
+    color: $font-default;
+  }
+}

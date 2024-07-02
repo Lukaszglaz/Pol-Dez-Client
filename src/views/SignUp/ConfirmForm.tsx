@@ -1,8 +1,9 @@
 import { FormEvent } from "react";
 import { Step, useSignup } from "../../contexts/signup.context";
 import { Link, useNavigate } from "react-router-dom";
-import { CreateUserRequest } from "../../types";
+import { Method } from "../../types";
 import { toast } from "react-toastify";
+import { callApi } from "../../utils/api";
 
 export const ConfirmForm = () => {
   const { signup, setSignup } = useSignup();
@@ -25,24 +26,20 @@ export const ConfirmForm = () => {
 
       return;
     }
-
-    const response = await fetch("http://localhost:3001/user", {
-      body: JSON.stringify({
-        confirmPassword: signup.confirmPassword,
-        email: signup.email,
-        firstName: signup.firstName,
-        lastName: signup.lastName,
-        password: signup.password,
-        playerTag: signup.playerTag,
-      } as CreateUserRequest),
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+    const response = await callApi<string>("user", Method.Post, {
+      confirmPassword: signup.confirmPassword,
+      email: signup.email,
+      firstName: signup.firstName,
+      lastName: signup.lastName,
+      password: signup.password,
+      playerTag: signup.playerTag,
     });
+
+    if (!response.status) return toast.error(response.message);
+
     // Mozna to zastąpić toastify chodzi o /complete-signup a za to zmaienic sciezke na /login i wyzej uzyc toastify
     // Przenoszenie po rejestracji na potwierdzenie loginu
-    if (response.ok) return navigate("/complete-signup");
+    if (response.status) return navigate("/complete-signup");
   };
   return (
     <>
