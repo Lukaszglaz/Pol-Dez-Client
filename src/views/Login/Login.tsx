@@ -25,6 +25,8 @@ export const Login = () => {
 
     if (!response.status) return toast.error(response.message);
 
+    toast.success("Logowanie zakończyło się pomyślnie.");
+
     setUser(response.results.user);
     setLocalStorage("token", response.results.token);
 
