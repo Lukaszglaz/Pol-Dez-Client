@@ -22,6 +22,9 @@
 // Styles Forgot Passowrd
 @import "./views/forgot-password";
 
+// Styles Reset Password
+@import "./views/reset-password";
+
 // Styles Page Not Found Views
 @import "./views/page-not-found";
 
@@ -30,3 +33,12 @@
 
 // Styles Page About Us
 @import "./views/about-us";
+
+// Panel Style
+
+// Styles Page Panel Main
+@import "./views/panel/panel";
+// Styles Page Panel Nav
+@import "./views/panel/panel-nav";
+// Styles Page Panel Player
+@import "./views/panel/panel-player";
