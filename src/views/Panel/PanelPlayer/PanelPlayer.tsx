@@ -2,18 +2,30 @@
 // import { callApi } from "../../../utils/api";
 // import { Method, PlayerResponse } from "../../../types";
 import Slider, { Settings } from "react-slick";
+import { usePanelInfo } from "../../../contexts/panel.context";
 
 export const PanelPlayer = () => {
-  // const getData = async () => {
-  //   const response = await callApi<PlayerResponse>(
-  //     "panel/player",
-  //     Method.Get,
-  //     {}
-  //   );
-  // };
-  // useEffect(() => {
-  //   getData();
-  // });
+  const player = usePanelInfo().player;
+  if (!player) return;
+
+  const {
+    name,
+    townHallLevel,
+    townHallWeaponLevel,
+    builderHallLevel,
+    clan,
+    role,
+    expLevel,
+    warStars,
+    trophies,
+    builderBaseTrophies,
+    donations,
+    received,
+    attackWins,
+    defenseWins,
+    bestTrophies,
+    bestBuilderBaseTrophies,
+  } = player;
 
   const settings: Settings = {
     // dots: true,
@@ -37,53 +49,74 @@ export const PanelPlayer = () => {
         </div>
         <div className="profile-card__container">
           <div className="profile-card__name">
-            <h1 className="profile-card__name-player">Fokusik</h1>
+            <h1 className="profile-card__name-player">{name}</h1>
           </div>
           <div className="profile-card__details">
-            <div className="profile-card__detail">TH 13</div>
-            <div className="profile-card__detail">BH 9</div>
-            <div className="profile-card__detail">Poland</div>
-            <div className="profile-card__detail">Polska Dezerter</div>
-            <div className="profile-card__detail">CoLeader</div>
+            <div className="profile-card__detail">
+              Town Hall Level: {townHallLevel}
+            </div>
+            <div className="profile-card__detail">
+              Town Hall Weapon Level: {townHallWeaponLevel}
+            </div>
+
+            <div className="profile-card__detail">
+              Builder Hall Level: {builderHallLevel}
+            </div>
+            <div className="profile-card__detail">Clan: {clan?.name}</div>
+            <div className="profile-card__detail">{role}</div>
           </div>
           <div className="profile-card__stats">
             <div className="profile-card__stat">
-              <span className="profile-card__stat-value">224</span>
+              <span className="profile-card__stat-value">
+                Expierence Level: {expLevel}
+              </span>
             </div>
             <div className="profile-card__stat">
-              <span className="profile-card__stat-value">2,112</span>
+              <span className="profile-card__stat-value">
+                War Stars: {warStars}
+              </span>
             </div>
             <div className="profile-card__stat">
-              <span className="profile-card__stat-value">2,670</span>
+              <span className="profile-card__stat-value">
+                Trophies: {trophies}
+              </span>
             </div>
             <div className="profile-card__stat">
-              <span className="profile-card__stat-value">22,035</span>
+              <span className="profile-card__stat-value">
+                Builder Base Trophies {builderBaseTrophies}
+              </span>
             </div>
             <div className="profile-card__stat">
-              <span className="profile-card__stat-value">3,912</span>
+              <span className="profile-card__stat-value">
+                Troops Donation: {donations}
+              </span>
             </div>
             <div className="profile-card__stat">
-              <span className="profile-card__stat-value">0</span>
+              <span className="profile-card__stat-value">
+                Troops Received: {received}
+              </span>
             </div>
             <div className="profile-card__stat">
-              <span className="profile-card__stat-value">0</span>
+              <span className="profile-card__stat-value">
+                Atack Wins: {attackWins}
+              </span>
             </div>
             <div className="profile-card__stat">
-              <span className="profile-card__stat-value">0</span>
-            </div>
-            <div className="profile-card__stat">
-              <span className="profile-card__stat-value">0</span>
-            </div>
-            <div className="profile-card__stat">
-              <span className="profile-card__stat-value">0</span>
+              <span className="profile-card__stat-value">
+                Atack Defense: {defenseWins}
+              </span>
             </div>
           </div>
           <div className="profile-card__bests">
             <p className="profile-card__bests-label">Player's Bests</p>
 
             <div className="profile-card__best-container">
-              <div className="profile-card__best">7,698</div>
-              <div className="profile-card__best">3,971</div>
+              <div className="profile-card__best">
+                Best Trophies: {bestTrophies}
+              </div>
+              <div className="profile-card__best">
+                Best Builder Hall Trophies: {bestBuilderBaseTrophies}
+              </div>
             </div>
           </div>
           <div className="profile-card__bests">
