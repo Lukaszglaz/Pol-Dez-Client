@@ -29,7 +29,7 @@ export const AboutUs = () => {
             </p>
           </div>
 
-          {/* <div className="section">
+          <div className="section">
             <h2>Nasz Zespół</h2>
             <div className="team">
               <div className="team-member">
@@ -45,7 +45,7 @@ export const AboutUs = () => {
                 <p>-0-0-0-0-</p>
               </div>
             </div>
-          </div> */}
+          </div>
 
           <div className="section">
             <h2>Nasze Wartości</h2>

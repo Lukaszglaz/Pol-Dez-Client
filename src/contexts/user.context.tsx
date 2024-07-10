@@ -19,7 +19,6 @@ export interface UserResponse {
 interface UserContextValue {
   user: UserResponse | null;
   setUser: Dispatch<SetStateAction<UserResponse | null>>;
-  isUserChecked: boolean;
 }
 
 export enum Role {
@@ -38,12 +37,9 @@ interface Props {
 export const UserProvider = ({ children }: Props) => {
   const [user, setUser] = useState<UserResponse | null>(null);
 
-  const [isUserChecked, setIsUserChecked] = useState(false);
-
   useEffect(() => {
     (async () => {
       const response = await callApi<UserResponse>("auth/is-logged");
-      setIsUserChecked(true);
       if (response.status) {
         setUser(response.results);
       }
@@ -55,7 +51,6 @@ export const UserProvider = ({ children }: Props) => {
       value={{
         user,
         setUser,
-        isUserChecked,
       }}
     >
       {children}
