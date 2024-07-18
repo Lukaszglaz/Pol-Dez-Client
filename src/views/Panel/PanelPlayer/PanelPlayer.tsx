@@ -91,8 +91,6 @@ export const PanelPlayer = () => {
     0
   );
 
-  console.log(totalLevelTroops);
-
   const totalMaxLevelTroops = homeTroops.reduce(
     (sum, troops) => sum + troops.hallMaxLevel,
     0
@@ -111,8 +109,6 @@ export const PanelPlayer = () => {
     (sum, troops) => sum + troops.level,
     0
   );
-
-  console.log(totalLevelTroops);
 
   const totalMaxLevelBuilderTroops = homeBuilderTroops.reduce(
     (sum, troops) => sum + troops.hallMaxLevel,
@@ -164,7 +160,7 @@ export const PanelPlayer = () => {
               Builder Hall Level: {builderHallLevel}
             </div>
             <div className="profile-card__detail">Clan: {clan?.name}</div>
-            <div className="profile-card__detail">{role}</div>
+            <div className="profile-card__detail">Role Clan: {role}</div>
           </div>
           <div className="profile-card__stats">
             <div className="profile-card__stat">
