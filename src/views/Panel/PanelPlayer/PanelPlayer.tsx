@@ -34,13 +34,12 @@ export const PanelPlayer = () => {
   } = player;
 
   const settings: Settings = {
-    // dots: true,
     arrows: false,
     infinite: true,
     slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 4000,
     pauseOnHover: true,
   };
 
@@ -134,15 +133,37 @@ export const PanelPlayer = () => {
   const progressPercentageSpells =
     (totalLevelSpells / totalMaxLevelSpells) * 100;
 
+  // Level Max heroes - Level min
+
+  const heroLeft = heroes.at(0)
+    ? (heroes.at(0)?.hallMaxLevel ?? 0) - (heroes.at(0)?.level ?? 0)
+    : 0;
+  const archerLeft = heroes.at(1)
+    ? (heroes.at(1)?.hallMaxLevel ?? 0) - (heroes.at(1)?.level ?? 0)
+    : 0;
+  const wardenLeft = heroes.at(2)
+    ? (heroes.at(2)?.hallMaxLevel ?? 0) - (heroes.at(2)?.level ?? 0)
+    : 0;
+  const championLeft = heroes.at(4)
+    ? (heroes.at(4)?.hallMaxLevel ?? 0) - (heroes.at(4)?.level ?? 0)
+    : 0;
+
+  const machineBuilderLeft = heroes.at(3)
+    ? (heroes.at(3)?.hallMaxLevel ?? 0) - (heroes.at(3)?.level ?? 0)
+    : 0;
+  const copterBuilderLeft = heroes.at(5)
+    ? (heroes.at(5)?.hallMaxLevel ?? 0) - (heroes.at(5)?.level ?? 0)
+    : 0;
+
   return (
     <main className="panel__content">
       <div className="profile-card">
         <div className="profile-card__picture">
-          {/* <img
-            src="/img/heroSkin.png"
-            alt="Profile"
+          <img
+            src="/img/RoyalChampion_Pose03.png"
+            alt="Profile Pose 01"
             className="profile-card__picture-img"
-          /> */}
+          />
         </div>
         <div className="profile-card__container">
           <div className="profile-card__name">
@@ -165,7 +186,7 @@ export const PanelPlayer = () => {
           <div className="profile-card__stats">
             <div className="profile-card__stat">
               <span className="profile-card__stat-value">
-                Expierence Level: {expLevel}
+                Exp Level: {expLevel}
               </span>
             </div>
             <div className="profile-card__stat">
@@ -268,65 +289,133 @@ export const PanelPlayer = () => {
                 <h2 className="profile-content__summary-main">Home Village</h2>
                 <div className="profile-content__summary-container">
                   <div className="profile-content__summary-home__heroes">
-                    <p className="profile-content__summary-main__name">
-                      Heroes
-                    </p>
-                    {/* <h2 className="profile-content__summary-main"></h2> */}
-
-                    <div className="profile-content__summary-progressbar">
-                      <div
-                        className="profile-content__summary-progressbar__progress"
-                        style={{ width: `${progressPercentageHeroes}%` }}
-                      >
-                        <span className="profile-content__summary-main__lvl">
-                          {totalLevelHeroes}
-                        </span>
-                        /
-                        <span className="profile-content__summary-main__lvl">
-                          {totalMaxLevelHeroes}
-                        </span>
+                    <div className="profile-content__summary-home__image">
+                      <img
+                        className="profile-content__summary-home__image"
+                        src="/public/img/summary/armyth/hero-0.png"
+                        alt="Hero Image"
+                      />
+                    </div>
+                    <div className="profile-content__summary-containerArmy">
+                      <div className="profile-content__summary-containerArmy__text">
+                        <h2>Heroes</h2>
+                        <p>Level Min to Max</p>
+                      </div>
+                      <div className="profile-content__summary-containerArmy__progressbar">
+                        <div
+                          className="profile-content__summary-containerArmy__progressbar-progress"
+                          style={{ width: `${progressPercentageHeroes}%` }}
+                        >
+                          <span className="profile-content__summary-main__lvl">
+                            {totalLevelHeroes}
+                          </span>
+                          /
+                          <span className="profile-content__summary-main__lvl">
+                            {totalMaxLevelHeroes}
+                          </span>
+                        </div>
+                      </div>
+                      <div className="profile-content__summary-containerArmy__levelLeft">
+                        <div className="levelLeft__container">
+                          <img
+                            src="/img/Summary/ArmyTh/LevelLeft/hero-0.png"
+                            alt="Hero"
+                            className="levelLeft__container-image"
+                          />
+                          <div className="levelLeft__container-statLeft">
+                            + {heroLeft}
+                          </div>
+                        </div>
+                        <div className="levelLeft__container">
+                          <img
+                            src="/img/Summary/ArmyTh/LevelLeft/hero-1.webp"
+                            alt="Hero"
+                            className="levelLeft__container-image"
+                          />
+                          <div className="levelLeft__container-statLeft">
+                            + {archerLeft}
+                          </div>
+                        </div>
+                        <div className="levelLeft__container">
+                          <img
+                            src="/img/Summary/ArmyTh/LevelLeft/hero-2.png"
+                            alt="Hero"
+                            className="levelLeft__container-image"
+                          />
+                          <div className="levelLeft__container-statLeft">
+                            + {wardenLeft}
+                          </div>
+                        </div>
+                        <div className="levelLeft__container">
+                          <img
+                            src="/img/Summary/ArmyTh/LevelLeft/hero-3.webp"
+                            alt="Hero"
+                            className="levelLeft__container-image"
+                          />
+                          <div className="levelLeft__container-statLeft">
+                            + {championLeft}
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                   <div className="profile-content__summary-home__heroes">
-                    <p className="profile-content__summary-main__name">
-                      Troops
-                    </p>
-                    {/* <h2 className="profile-content__summary-main"></h2> */}
+                    <div className="profile-content__summary-home__image">
+                      <img
+                        className="profile-content__summary-home__image"
+                        src="/public/img/summary/armyth/troop-0.webp"
+                        alt="Hero Image"
+                      />
+                    </div>
 
-                    <div className="profile-content__summary-progressbar">
-                      <div
-                        className="profile-content__summary-progressbar__progress"
-                        style={{ width: `${progressPercentageTroops}%` }}
-                      >
-                        <span className="profile-content__summary-main__lvl">
-                          {totalLevelTroops}
-                        </span>
-                        /
-                        <span className="profile-content__summary-main__lvl">
-                          {totalMaxLevelTroops}
-                        </span>
+                    <div className="profile-content__summary-containerArmy">
+                      <div className="profile-content__summary-containerArmy__text">
+                        <h2>Troops</h2>
+                        <p>Level Min to Max</p>
+                      </div>
+                      <div className="profile-content__summary-containerArmy__progressbar">
+                        <div
+                          className="profile-content__summary-containerArmy__progressbar-progress"
+                          style={{ width: `${progressPercentageTroops}%` }}
+                        >
+                          <span className="profile-content__summary-main__lvl">
+                            {totalLevelTroops}
+                          </span>
+                          /
+                          <span className="profile-content__summary-main__lvl">
+                            {totalMaxLevelTroops}
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
                   <div className="profile-content__summary-home__heroes">
-                    <p className="profile-content__summary-main__name">
-                      Spells
-                    </p>
-                    {/* <h2 className="profile-content__summary-main"></h2> */}
+                    <div className="profile-content__summary-home__image">
+                      <img
+                        className="profile-content__summary-home__image"
+                        src="/public/img/summary/armyth/spell-0.png"
+                        alt="Hero Image"
+                      />
+                    </div>
 
-                    <div className="profile-content__summary-progressbar">
-                      <div
-                        className="profile-content__summary-progressbar__progress"
-                        style={{ width: `${progressPercentageSpells}%` }}
-                      >
-                        <span className="profile-content__summary-main__lvl">
-                          {totalLevelSpells}
-                        </span>
-                        /
-                        <span className="profile-content__summary-main__lvl">
-                          {totalMaxLevelSpells}
-                        </span>
+                    <div className="profile-content__summary-containerArmy">
+                      <div className="profile-content__summary-containerArmy__text">
+                        <h2>Spells</h2>
+                        <p>Level Min to Max</p>
+                      </div>
+                      <div className="profile-content__summary-containerArmy__progressbar">
+                        <div
+                          className="profile-content__summary-containerArmy__progressbar-progress"
+                          style={{ width: `${progressPercentageSpells}%` }}
+                        >
+                          <span className="profile-content__summary-main__lvl">
+                            {totalLevelSpells}
+                          </span>
+                          /
+                          <span className="profile-content__summary-main__lvl">
+                            {totalMaxLevelSpells}
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -337,43 +426,86 @@ export const PanelPlayer = () => {
                 <h2 className="profile-content__summary-main">Builder Base</h2>
                 <div className="profile-content__summary-container">
                   <div className="profile-content__summary-home__heroes">
-                    <p className="profile-content__summary-main__name">
-                      Heroes
-                    </p>
-                    {/* <h2 className="profile-content__summary-main"></h2> */}
-
-                    <div className="profile-content__summary-progressbar">
-                      <div
-                        className="profile-content__summary-progressbar__progress"
-                        style={{ width: `${progressPercentageBuilderHeroes}%` }}
-                      >
-                        <span className="profile-content__summary-main__lvl">
-                          {totalLevelBuilderHeroes}
-                        </span>
-                        /
-                        <span className="profile-content__summary-main__lvl">
-                          {totalMaxLevelBuilderHeroes}
-                        </span>
+                    <div className="profile-content__summary-home__image">
+                      <img
+                        className="profile-content__summary-home__image"
+                        src="/public/img/summary/armybs/hero-3.png"
+                        alt="Hero Image"
+                      />
+                    </div>
+                    <div className="profile-content__summary-containerArmy">
+                      <div className="profile-content__summary-containerArmy__text">
+                        <h2>Heroes</h2>
+                        <p>Level Min to Max</p>
+                      </div>
+                      <div className="profile-content__summary-containerArmy__progressbar">
+                        <div
+                          className="profile-content__summary-containerArmy__progressbar-progress"
+                          style={{
+                            width: `${progressPercentageBuilderHeroes}%`,
+                          }}
+                        >
+                          <span className="profile-content__summary-main__lvl">
+                            {totalLevelBuilderHeroes}
+                          </span>
+                          /
+                          <span className="profile-content__summary-main__lvl">
+                            {totalMaxLevelBuilderHeroes}
+                          </span>
+                        </div>
+                      </div>
+                      <div className="profile-content__summary-containerArmy__levelLeft">
+                        <div className="levelLeft__container">
+                          <img
+                            src="/img/Summary/ArmyBs/LevelLeft/hero-3.png"
+                            alt="Hero"
+                            className="levelLeft__container-image"
+                          />
+                          <div className="levelLeft__container-statLeft">
+                            + {machineBuilderLeft}
+                          </div>
+                        </div>
+                        <div className="levelLeft__container">
+                          <img
+                            src="/img/Summary/ArmyBs/LevelLeft/hero-5.webp"
+                            alt="Hero"
+                            className="levelLeft__container-image"
+                          />
+                          <div className="levelLeft__container-statLeft">
+                            + {copterBuilderLeft}
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                   <div className="profile-content__summary-home__heroes">
-                    <p className="profile-content__summary-main__name">
-                      Troops
-                    </p>
-                    {/* <h2 className="profile-content__summary-main"></h2> */}
-                    <div className="profile-content__summary-progressbar">
-                      <div
-                        className="profile-content__summary-progressbar__progress"
-                        style={{ width: `${progressPercentageBuilderTroops}%` }}
-                      >
-                        <span className="profile-content__summary-main__lvl">
-                          {totalLevelBuilderTroops}
-                        </span>
-                        /
-                        <span className="profile-content__summary-main__lvl">
-                          {totalMaxLevelBuilderTroops}
-                        </span>
+                    <div className="profile-content__summary-home__image">
+                      <img
+                        className="profile-content__summary-home__image"
+                        src="/public/img/summary/armybs/troop-19.png"
+                        alt="Hero Image"
+                      />
+                    </div>
+                    <div className="profile-content__summary-containerArmy">
+                      <div className="profile-content__summary-containerArmy__text">
+                        <h2>Troops</h2>
+                        <p>Level Min to Max</p>
+                      </div>
+                      <div className="profile-content__summary-containerArmy__progressbar">
+                        <div
+                          className="profile-content__summary-containerArmy__progressbar-progress"
+                          style={{
+                            width: `${progressPercentageBuilderTroops}%`,
+                          }}
+                        >
+                          <span className="profile-content__summary-main__lvl">
+                            {totalLevelBuilderTroops}
+                          </span>
+                          /
+                          <span className="profile-content__summary-main__lvl">
+                            {totalMaxLevelBuilderTroops}
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>

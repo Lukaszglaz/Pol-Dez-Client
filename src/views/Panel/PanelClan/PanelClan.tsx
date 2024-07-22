@@ -9,7 +9,7 @@ export const PanelClan = () => {
   const {
     name,
     memberCount,
-    // badge,
+    badge,
     type,
     location,
     requiredTrophies,
@@ -40,11 +40,11 @@ export const PanelClan = () => {
     <main className="panel__content">
       <div className="profile-card">
         <div className="profile-card__picture">
-          {/* <img
+          <img
             src={badge.url}
             alt="Profile"
             className="profile-card__picture-img"
-          /> */}
+          />
         </div>
         <div className="profile-card__container">
           <div className="profile-card__name">
