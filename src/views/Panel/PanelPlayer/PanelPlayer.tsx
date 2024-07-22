@@ -315,6 +315,7 @@ export const PanelPlayer = () => {
                           </span>
                         </div>
                       </div>
+                      <h3>Hero levels left:</h3>
                       <div className="profile-content__summary-containerArmy__levelLeft">
                         <div className="levelLeft__container">
                           <img
@@ -454,6 +455,7 @@ export const PanelPlayer = () => {
                           </span>
                         </div>
                       </div>
+                      <h3>Hero levels left:</h3>
                       <div className="profile-content__summary-containerArmy__levelLeft">
                         <div className="levelLeft__container">
                           <img
