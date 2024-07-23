@@ -320,7 +320,7 @@ export const PanelPlayer = () => {
                         <div className="levelLeft__container">
                           <img
                             src="/img/Summary/ArmyTh/LevelLeft/hero-0.png"
-                            alt="Hero"
+                            alt="Archer image"
                             className="levelLeft__container-image"
                           />
                           <div className="levelLeft__container-statLeft">
@@ -340,7 +340,7 @@ export const PanelPlayer = () => {
                         <div className="levelLeft__container">
                           <img
                             src="/img/Summary/ArmyTh/LevelLeft/hero-2.png"
-                            alt="Hero"
+                            alt="Warden image"
                             className="levelLeft__container-image"
                           />
                           <div className="levelLeft__container-statLeft">
@@ -350,7 +350,7 @@ export const PanelPlayer = () => {
                         <div className="levelLeft__container">
                           <img
                             src="/img/Summary/ArmyTh/LevelLeft/hero-3.webp"
-                            alt="Hero"
+                            alt="Champion image"
                             className="levelLeft__container-image"
                           />
                           <div className="levelLeft__container-statLeft">
@@ -365,7 +365,7 @@ export const PanelPlayer = () => {
                       <img
                         className="profile-content__summary-home__image"
                         src="/public/img/summary/armyth/troop-0.webp"
-                        alt="Hero Image"
+                        alt="Troops image"
                       />
                     </div>
 
@@ -395,7 +395,7 @@ export const PanelPlayer = () => {
                       <img
                         className="profile-content__summary-home__image"
                         src="/public/img/summary/armyth/spell-0.png"
-                        alt="Hero Image"
+                        alt="Spells image"
                       />
                     </div>
 
@@ -431,7 +431,7 @@ export const PanelPlayer = () => {
                       <img
                         className="profile-content__summary-home__image"
                         src="/public/img/summary/armybs/hero-3.png"
-                        alt="Hero Image"
+                        alt="Builder hero image"
                       />
                     </div>
                     <div className="profile-content__summary-containerArmy">
@@ -460,7 +460,7 @@ export const PanelPlayer = () => {
                         <div className="levelLeft__container">
                           <img
                             src="/img/Summary/ArmyBs/LevelLeft/hero-3.png"
-                            alt="Hero"
+                            alt="Machine builder image"
                             className="levelLeft__container-image"
                           />
                           <div className="levelLeft__container-statLeft">
@@ -470,7 +470,7 @@ export const PanelPlayer = () => {
                         <div className="levelLeft__container">
                           <img
                             src="/img/Summary/ArmyBs/LevelLeft/hero-5.webp"
-                            alt="Hero"
+                            alt="Copter builder image"
                             className="levelLeft__container-image"
                           />
                           <div className="levelLeft__container-statLeft">
@@ -485,7 +485,7 @@ export const PanelPlayer = () => {
                       <img
                         className="profile-content__summary-home__image"
                         src="/public/img/summary/armybs/troop-19.png"
-                        alt="Hero Image"
+                        alt="Troops image"
                       />
                     </div>
                     <div className="profile-content__summary-containerArmy">
@@ -517,7 +517,18 @@ export const PanelPlayer = () => {
           )}
           {activeTab === "Rankings" && (
             <div className="profile-content__rankings">
-              <p>Tutaj jest treść dla Rankings.</p>
+              <h2 className="profile-content__rankings-text">Trofea</h2>
+              <div className="profile-content__rankings-container">
+                <div className="information__trofea">
+                  <div className="information__trofea-container">
+                    <p>Trofea</p>
+
+                    <p className="information__trofea-container__text">
+                      {trophies}
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           )}
           {activeTab === "Army" && (
@@ -527,8 +538,7 @@ export const PanelPlayer = () => {
           )}
           {activeTab === "Achievements" && (
             <div className="profile-content__achievements">
-              {/* Treść dla Achievements */}
-              <p>Tutaj jest treść dla Achievements.</p>
+              <p>Tutaj jest treść dla Achviementsów</p>
             </div>
           )}
         </div>
