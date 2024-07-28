@@ -40,5 +40,21 @@
 @import "./views/panel/panel";
 // Styles Page Panel Nav
 @import "./views/panel/panel-nav";
+
+//  PANEL PLAYER SECTION
+
 // Styles Page Panel Player
-@import "./views/panel/panel-player";
+
+@import "./views/panel/PanelPlayer/panel-player";
+
+// Styles  Panel Player Baner
+@import "./views/panel/PanelPlayer/panel-player_baner";
+
+// Styles  Panel Player Stats
+@import "./views/panel/PanelPlayer/panel-player_stats";
+
+// Styles  Panel Player Stats Select
+@import "./views/panel/PanelPlayer/MenuList/panel-player_rankings";
+@import "./views/panel/PanelPlayer/MenuList/panel-player_achievements";
+@import "./views/panel/PanelPlayer/MenuList/panel-player_summary";
+@import "./views/panel/PanelPlayer/MenuList/panel-player_army";
