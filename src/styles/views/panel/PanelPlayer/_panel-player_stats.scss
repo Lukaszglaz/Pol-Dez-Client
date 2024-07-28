@@ -1,0 +1,35 @@
+.panel__content {
+  position: relative;
+
+  .profile-tabs {
+    width: 100%;
+    margin-top: 3rem;
+    background-color: #222526;
+    padding: 1rem 0;
+    border-radius: 24px;
+
+    &__link {
+      // border: 1px solid red;
+      margin: 0 auto;
+      width: 90%;
+      &-list {
+        position: relative;
+        transition: 0.5s ease;
+        &:hover {
+          color: $font-default;
+        }
+      }
+      .active {
+        color: $font-default;
+        &::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 2px;
+          background-color: $font-default;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
