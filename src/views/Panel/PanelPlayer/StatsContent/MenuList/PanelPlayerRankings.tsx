@@ -1,4 +1,5 @@
 import { usePanelInfo } from "../../../../../contexts/panel.context";
+import TrophyImage from "../../../../../../public/img/Rankings/Trofea/trophy.webp";
 
 export const PanelPlayerRankings = () => {
   const player = usePanelInfo().player;
@@ -10,13 +11,12 @@ export const PanelPlayerRankings = () => {
     <div className="profile-content__rankings">
       <h2 className="profile-content__rankings-text">Trofea</h2>
       <div className="profile-content__rankings-container">
-        <div className="information__trofea">
-          <div className="information__trofea-container">
-            <p>Trofea</p>
-
-            <p className="information__trofea-container__text">{trophies}</p>
-          </div>
-        </div>
+        <img
+          className="profile-content__rankings-container__image"
+          src={TrophyImage}
+          alt="Trophy Image"
+        />
+        <p className="profile-content__rankings-container__text">{trophies}</p>
       </div>
     </div>
   );
