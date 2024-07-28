@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 
 import { PanelPlayerAchievements } from "./MenuList/PanelPlayerAchievements";
-import { PanelPlayerArmy } from "./MenuList/PanelPlayerArmy";
+import { PanelPlayerArmy } from "./MenuList/PanelPlayerArmy/PanelPlayerArmy";
 import { PanelPlayerRankings } from "./MenuList/PanelPlayerRankings";
 import { PanelPlayerSummary } from "./MenuList/PanelPlayerSummary";
 
