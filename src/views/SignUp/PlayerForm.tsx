@@ -17,7 +17,7 @@ export const PlayerForm = () => {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
 
-    const test = /#([A-Z0-9]{0,10})$/.test(signup.playerTag);
+    const test = /^#[PYLQGRJCUV0289]{3,9}$/.test(signup.playerTag);
 
     if (!test) {
       toast.error("Incorrect Player Tag! ");
