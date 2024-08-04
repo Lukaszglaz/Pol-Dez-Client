@@ -1,0 +1,67 @@
+.modal {
+  position: fixed;
+  top: calc(50% - 250px);
+  left: calc(50% - 45%);
+  width: 90%;
+  height: 500px;
+  background-color: $bg-color;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 4px 7px 10px $font-default;
+  z-index: 2;
+  opacity: 0.5;
+  transform: translateY(-100vh);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  &__closeButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    .closeButton__text {
+      display: block;
+      font-size: 1.5rem;
+      transition: transform 0.5s ease;
+    }
+  }
+  &__container {
+    margin-top: 2.5rem;
+    &-first {
+      h3 {
+        margin-top: 10px;
+      }
+    }
+    p {
+      margin-top: 20px;
+    }
+    &-second__stats {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      &-container {
+        width: 45%;
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        &::selection {
+          background-color: $bg-checked-text;
+          color: $font-default;
+        }
+        p {
+          margin-top: 5px;
+        }
+      }
+      h3 {
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+.showModal {
+  opacity: 1;
+  transform: translateY(0);
+}
