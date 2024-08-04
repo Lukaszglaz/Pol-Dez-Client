@@ -14,7 +14,7 @@ export const PanelNav = () => {
           </li>
           <li className="panel__nav-item">
             <NavLink to="/panel/player" className="panel__nav-link">
-              Gracz
+              Player
             </NavLink>
           </li>
 

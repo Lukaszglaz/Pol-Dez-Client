@@ -22,7 +22,7 @@ export const ConfirmForm = () => {
     e.preventDefault();
 
     if (signup.isConfirmTerms === false) {
-      toast.error("Pole () nie zostało zaznaczone");
+      toast.error("The box ( I agree all statements in) was not ticked.");
 
       return;
     }

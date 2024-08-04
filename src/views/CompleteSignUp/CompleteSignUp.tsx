@@ -4,17 +4,18 @@ export const CompleteSignUp = () => {
   return (
     <>
       <div className="signup-confirmation">
-        <h2 className="signup-heading">Rejestracja zakończona sukcesem!</h2>
+        <h2 className="signup-heading">Registration successfully completed!</h2>
         <p className="signup-text">
-          Witaj! Twoje konto zostało pomyślnie zarejestrowane w aplikacji:
+          Hello, your account has been successfully registered in the
+          application:
         </p>
         <p className="signup-text">"Polska Dezerter - Clash of Clans".</p>
         <div className="signup-options">
           <Link to="/login" className="signup-button">
-            Przejdź do logowania
+            Go to login
           </Link>
           <Link to="/" className="signup-button">
-            Wróć do strony głównej
+            Go back to the homepage.
           </Link>
         </div>
       </div>

@@ -2,30 +2,30 @@ export const AboutUs = () => {
   return (
     <>
       <div className="container">
-        <h1>O Nas</h1>
+        <h1>About Us</h1>
         <p>
-          Poznaj zespół stojący za Polska Dezerter - <span>Clash of Clans</span>
+          Meet the team behind Polska Dezerter - <span>Clash of Clans</span>
         </p>
 
         <div className="content">
           <div className="section">
-            <h2>Kim Jesteśmy?</h2>
+            <h2>Who are we?</h2>
             <p>
-              Polska Dezerter to społeczność <span>Clash of Clans</span>, która
-              skupia graczy z całej Polski. Nasza aplikacja została stworzona z
-              myślą o fanach tej popularnej gry strategicznej, aby umożliwić im
-              lepsze zarządzanie swoimi wioskami, klanami i strategiami.
+              Poland Deserter is a <span>Clash of Clans</span> community that.
+              brings together players from all over Poland. Our application has
+              been created with for fans of this popular strategy game to enable
+              them to better manage their villages, clans and strategies.
             </p>
           </div>
 
           <div className="section">
-            <h2>Nasza Misja</h2>
+            <h2>Our Mission</h2>
             <p>
-              Naszą misją jest dostarczenie graczom <span>Clash of Clans</span>{" "}
-              najlepszych narzędzi do zarządzania ich klanami oraz wioskami.
-              Chcemy, aby każdy gracz mógł czerpać maksimum przyjemności z gry,
-              jednocześnie mając dostęp do zaawansowanych funkcji, które
-              ułatwiają planowanie i strategię.
+              Our mission is to provide players with <span>Clash of Clans</span>{" "}
+              the best tools to manage their clans and villages. We want every
+              player to be able to get maximum enjoyment from the game, while
+              having access to advanced features that make planning and strategy
+              easier.
             </p>
           </div>
 
@@ -48,29 +48,28 @@ export const AboutUs = () => {
           </div> */}
 
           <div className="section">
-            <h2>Nasze Wartości</h2>
+            <h2>Our Values</h2>
             <p>
-              <span>Pasja:</span> Kochamy <span>Clash of Clans</span> i chcemy
-              dzielić się naszą pasją z innymi.
+              <span>Passion:</span>We love <span>Clash of Clans</span> and want
+              to share our passion with others.
             </p>
             <p>
-              <span>Innowacja:</span> Ciągle pracujemy nad nowymi funkcjami, aby
-              zapewnić graczom najlepsze narzędzia.
+              <span>Innovation:</span> We are constantly working on new
+              features, to provide players with the best tools.
             </p>
             <p>
-              <span>Wspólnota:</span> Wierzymy, że najlepsze osiągnięcia
-              przychodzą poprzez współpracę i wspieranie się nawzajem.
+              <span>Community:</span>We believe that the best achievements come
+              by working together and supporting each other.
             </p>
           </div>
 
           <div className="section">
-            <h2>Kontakt</h2>
+            <h2>Contact</h2>
             <p>
-              Jeśli masz pytania lub potrzebujesz wsparcia, nie wahaj się z nami
-              skontaktować:
+              If you have questions or need support, do not hesitate to Contact:
             </p>
             <p>
-              Email:{" "}
+              Address E-mail:{" "}
               <a href="mailto:kontakt@glazlukasz.pl">kontakt@glazlukasz.pl</a>
             </p>
           </div>

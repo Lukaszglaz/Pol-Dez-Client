@@ -5,21 +5,22 @@ export const Home = () => {
     <>
       <main className="home">
         <section className="container__welcome_bx">
-          <h1>Aplikacja Polska Dezerter - Clash of Clans</h1>
+          <h1>App Polska Dezerter - Clash of Clans</h1>
           <p>
-            Aplikacja Polska Dezerter - Clash of Clans to narzędzie stworzone
-            specjalnie dla klanu Polska Dezerter w grze Clash of Clans.
+            The Polska Dezerter - Clash of Clans application is a tool created
+            specifically for the Poland Deserter clan in the game Clash of
+            Clans.
           </p>
           <p>
-            Zapewnia ona przejrzysty interfejs użytkownika oraz dostęp do
-            kluczowych funkcji potrzebnych do zarządzania klanem oraz śledzenia
-            postępów graczy.
+            It provides a clear user interface and access to the key functions
+            needed to manage your clan and track the progress of your progress
+            of players.
           </p>
           <div className="button-container">
             <div className="block-pl">
               <i className="bx bxs-chevrons-right"></i>
 
-              <Link to="#">Napisz do nas!</Link>
+              <Link to="#">Write to us!</Link>
             </div>
             {/* <div className="block-pl">
               <a href="#">Zobacz moją ofertę</a>
@@ -27,15 +28,13 @@ export const Home = () => {
           </div>
           <div className="container__last_bx">
             <div className="container__main_block">
-              <h2>Główne funkcje aplikacji:</h2>
+              <h2>Main features of the application:</h2>
               <ul>
-                <li>Panel logowania i rejestracji dla użytkowników</li>
-                <li>Przeglądanie listy graczy dodanych przez administratora</li>
-                <li>Wyświetlanie statystyk graczy oraz klanu</li>
-                <li>Zarządzanie klanem przez administratora</li>
-                <li>
-                  Bezpieczne mechanizmy uwierzytelniania i przechowywania danych
-                </li>
+                <li>Login and registration panel for users</li>
+                <li>Viewing the list of players added by the administrator</li>
+                <li>Display of player and clan statistics</li>
+                <li>Clan management by the administrator</li>
+                <li>Secure authentication and data storage mechanisms</li>
               </ul>
             </div>
             <div className="container__aside_block">
@@ -43,9 +42,9 @@ export const Home = () => {
             </div>
           </div>
           <h3>
-            Zapraszamy do korzystania z aplikacji <br />
-            <span>Polska Dezerter - Clash of Clans</span>i dołączania do naszego
-            klanu w walce o dominację w świecie Clash of Clans!
+            You are welcome to use the application <br />
+            <span>Polska Dezerter - Clash of Clans</span> and join our clan in
+            the battle for supremacy in the world of Clash of Clans!
           </h3>
         </section>
       </main>

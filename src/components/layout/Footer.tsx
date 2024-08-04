@@ -1,38 +1,12 @@
 export const Footer = () => {
   return (
-    // <footer className="footer">
-    //   <div className="container__correct_ft">
-    //     <div className="contanier__contact_cc">
-    //       <h4>Informacje Kontaktowe</h4>
-    //       <p>
-    //         Adres e-mail:{" "}
-    //         <a href="mailto:kontakt@glazlukasz.pl">kontakt@glazlukasz.pl</a>
-    //       </p>
-    //     </div>
-    //     <div className="contanier__contact_cc">
-    //       <h4>Dla Użytkownika</h4>
-    //       <ul>
-    //         <li>
-    //           <Link to="/privacy-files-cookies">Polityka plików cookie</Link>
-    //         </li>
-    //         <li>
-    //           <Link to="/privacy-policy">Polityka prywatności</Link>
-    //         </li>
-    //       </ul>
-    //     </div>
-    //   </div>
-
-    //   <div className="contanier__contact_cc">
-    //     <p>Copyright © 2024 - All Rights Reserved. By glazlukasz.pl</p>
-    //   </div>
-    // </footer>
     <footer>
       <div className="container__box_one">
         <div className="contact-info">
-          <h3>Informacje Kontaktowe</h3>
+          <h3>Contact information</h3>
           <p>
-            Dołącz do społeczności Clash of Clans i zarządzaj swoją wioską jak
-            nigdy dotąd z Polska Dezerter.
+            Join the Clash of Clans community and manage your village like never
+            before with Polska Dezerter.
           </p>
           <div className="contact-center">
             <div className="phone-contact">
@@ -40,7 +14,7 @@ export const Footer = () => {
                 <i className="bx bx-envelope"></i>
               </div>
               <div className="image-contact">
-                <p>Adres e-mail:</p>
+                <p>Address E-mail:</p>
                 <p>
                   <a href="mailto:kontakt@glazlukasz.pl">
                     kontakt@glazlukasz.pl
@@ -52,45 +26,42 @@ export const Footer = () => {
           <h2></h2>
         </div>
         <div className="offer">
-          <h3>Nasza Aplikacja</h3>
+          <h3>Our Application</h3>
           <ul>
             <li>
-              <a href="/features">Funkcje</a>
+              <a href="/features">Functions</a>
             </li>
             <li>
-              <a href="/pricing">Cennik</a>
+              <a href="/support">Technical support</a>
             </li>
             <li>
-              <a href="/support">Wsparcie Techniczne</a>
+              <a href="/about">About us</a>
             </li>
             <li>
-              <a href="/about">O Nas</a>
-            </li>
-            <li>
-              <a href="/contact">Kontakt</a>
+              <a href="/contact">Contact</a>
             </li>
           </ul>
         </div>
         <div className="customer">
-          <h3>Dla Użytkownika</h3>
+          <h3>For the User</h3>
           <ul>
             <li>
-              <a href="">Regulamin serwisu</a>
+              <a href="">Terms of service</a>
             </li>
             <li>
-              <a href="">Polityka prywatności</a>
+              <a href="">Privacy policy</a>
             </li>
             <li>
-              <a href="">Polityka cookies</a>
+              <a href="">Cookie policy s</a>
             </li>
             <li>
-              <a href="">Jak wyłączyć pliki cookie</a>
+              <a href="">How to disable cookies</a>
             </li>
             <li>
-              <a href="">Obowiązek informacyjny RODO</a>
+              <a href="">Information obligation under RODO</a>
             </li>
             <li>
-              <a href="">Cyberbezpieczeństwo</a>
+              <a href="">Cyber security</a>
             </li>
           </ul>
           <div className="social__container">

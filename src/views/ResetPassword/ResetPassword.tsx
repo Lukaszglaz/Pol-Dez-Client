@@ -22,7 +22,7 @@ export const ResetPassword = () => {
 
     if (!response.status) return toast.error(response.message);
 
-    toast.success("Hasło zostało pomyślnie zmienione");
+    toast.success("Password successfully changed");
 
     navigate("/login");
   };
@@ -30,20 +30,20 @@ export const ResetPassword = () => {
   return (
     <div className="wrapper">
       <h2>
-        Witamy na podstronie resetowania hasła! Cieszymy się, że możemy Ci
-        pomóc.
+        Welcome to the password reset subpage! We are happy to be able to help
+        you help you.
       </h2>
       <p>
-        Wpisz poniżej nowe hasło oraz je powtórz. Kliknij przycisk "Zresetuj
-        hasło", by zmienić hasło na nowe.
+        Enter your new password below and repeat it. Click "Reset password "
+        button to change your password to the new one.
       </p>
       <form onSubmit={handleSubmit}>
         <label className="login__label">
-          Hasło
+          Password
           <input
             className="login__input"
             type="password"
-            placeholder="Hasło"
+            placeholder="Password"
             required
             value={form.password}
             onChange={(e) =>
@@ -55,11 +55,11 @@ export const ResetPassword = () => {
           />
         </label>
         <label className="login__label">
-          Powtórz Hasło
+          Repeat Password
           <input
             className="login__input"
             type="password"
-            placeholder=" Powtórz"
+            placeholder=" Repeat Password"
             required
             value={form.confirmPassword}
             onChange={(e) =>
@@ -71,7 +71,7 @@ export const ResetPassword = () => {
           />
         </label>
 
-        <button className="login__button">Zresetuj Hasło</button>
+        <button className="login__button">Reset Password</button>
       </form>
     </div>
   );

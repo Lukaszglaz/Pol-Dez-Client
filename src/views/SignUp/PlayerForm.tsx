@@ -14,6 +14,7 @@ export const PlayerForm = () => {
       step: Step.GeneralForm,
     }));
   };
+
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
 
@@ -34,7 +35,7 @@ export const PlayerForm = () => {
     <>
       <div className="container__main_correct">
         <form onSubmit={handleSubmit}>
-          <h2 className="signup__title">Zarejestruj konto</h2>
+          <h2 className="signup__title">Sign up for an account</h2>
 
           <label className="signup__label label__player_tag">
             Player Tag
@@ -53,13 +54,13 @@ export const PlayerForm = () => {
             />
             <p>
               Np:
-              <span>#JY892SHQ4</span>
+              <span>#PLQ28YR</span>
             </p>
           </label>
           <button type="button" onClick={handleBack}>
-            Cofnij
+            Go Back
           </button>
-          <button>Przejdź dalej</button>
+          <button>Continue</button>
         </form>
       </div>
     </>

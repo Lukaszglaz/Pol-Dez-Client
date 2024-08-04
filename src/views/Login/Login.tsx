@@ -26,7 +26,7 @@ export const Login = () => {
 
     if (!response.status) return toast.error(response.message);
 
-    toast.success("Logowanie zakończyło się pomyślnie.");
+    toast.success("Login was successful.");
 
     setUser(response.results.user);
     setLocalStorage("token", response.results.token);
@@ -38,13 +38,13 @@ export const Login = () => {
     <>
       <div className="container__main_correct">
         <form onSubmit={handleSubmit} className="login__form">
-          <h2 className="login__title">Zaloguj się do serwisu</h2>
+          <h2 className="login__title">Log in to the service</h2>
           <label className="login__label">
-            Adres E-mail
+            Address E-mail
             <input
               className="login__input"
               type="email"
-              placeholder="Adres E-mail"
+              placeholder="Address E-mail"
               required
               value={form.email}
               onChange={(e) =>
@@ -57,9 +57,9 @@ export const Login = () => {
           </label>
 
           <label className="login__label">
-            Hasło
+            Password
             <input
-              placeholder=" Hasło"
+              placeholder=" Password"
               className="login__input"
               required
               type={isVisible ? "text" : "password"}
@@ -80,14 +80,14 @@ export const Login = () => {
               <IoEye onClick={() => isSetVisible(true)} />
             )}
           </label>
-          <Link to="/forgot-password">Nie pamiętam hasła</Link>
+          <Link to="/forgot-password">I can't remember my password.</Link>
 
           <button type="submit" className="login__button">
-            Zaloguj się
+            Log in
           </button>
         </form>
         <div className="container__login_wc">
-          <h2 className="login__title">Zdjęcia z gry Clash Of Clans</h2>
+          <h2 className="login__title">Images from Clash Of Clans game</h2>
 
           <div className="image-coc">
             <img

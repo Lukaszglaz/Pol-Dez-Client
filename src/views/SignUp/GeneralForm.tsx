@@ -21,13 +21,13 @@ export const GeneralForm = () => {
     <>
       <div className="container__main_correct">
         <form onSubmit={handleSubmit}>
-          <h2 className="signup__title">Zarejestruj konto</h2>
+          <h2 className="signup__title">Sign up for an account</h2>
           <label className="signup__label">
-            Imię
+            Name
             <input
               className="signup__input"
               type="text"
-              placeholder="Imię"
+              placeholder="Name"
               required
               value={signup.firstName}
               onChange={(e) =>
@@ -39,11 +39,11 @@ export const GeneralForm = () => {
             />
           </label>
           <label className="signup__label">
-            Nazwisko
+            Last Name
             <input
               className="signup__input"
               type="text"
-              placeholder="Nazwisko"
+              placeholder="Last Name"
               required
               value={signup.lastName}
               onChange={(e) =>
@@ -55,11 +55,11 @@ export const GeneralForm = () => {
             />
           </label>
           <label className="signup__label">
-            Adres E-mail
+            Address E-mail
             <input
               className="signup__input"
               type="email"
-              placeholder="Adres E-mail"
+              placeholder="Address E-mail"
               required
               value={signup.email}
               onChange={(e) =>
@@ -71,9 +71,9 @@ export const GeneralForm = () => {
             />
           </label>
           <label className="signup__label">
-            Hasło
+            Password
             <input
-              placeholder="Hasło"
+              placeholder="Password"
               className="signup__input"
               required
               type={isVisible ? "text" : "password"}
@@ -95,9 +95,9 @@ export const GeneralForm = () => {
             )}
           </label>
           <label className="signup__label">
-            Potwierdź hasło
+            Confirm your password
             <input
-              placeholder="Potwierdź hasło"
+              placeholder="Confirm your password"
               className="signup__input"
               required
               type={isConfirmVisible ? "text" : "password"}
@@ -119,7 +119,7 @@ export const GeneralForm = () => {
             )}
           </label>
 
-          <button>Przejdź dalej</button>
+          <button>Continue</button>
         </form>
       </div>
     </>

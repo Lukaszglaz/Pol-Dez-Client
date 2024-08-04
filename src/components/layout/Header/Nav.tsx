@@ -13,7 +13,7 @@ export const Nav = () => {
     const response = await callApi("auth/logout");
 
     if (!response.status) return toast.error(response.message);
-    toast.success("Wylogowanie z konta zakończyło się pomyślnie.");
+    toast.success("Logging out of the account was successful.");
     setUser(null);
     deleteLocalStorage("token");
   };
@@ -49,18 +49,18 @@ export const Nav = () => {
 
       <nav className="navbar" ref={navRef}>
         <NavLink className="mn-active" to="/">
-          Strona Główna
+          Homepage
         </NavLink>
-        <NavLink to="/about-us">O Projekcie</NavLink>
+        <NavLink to="/about-us">About the Project</NavLink>
         <div className="container__btn_log">
           {!user ? (
             <NavLink className="login__btn btn__login" to="/login">
-              Zaloguj się
+              Log in
             </NavLink>
           ) : null}
           {!user ? (
             <NavLink className="register__btn btn__signup" to="/sign-up">
-              Zarejestruj się
+              Sign up
             </NavLink>
           ) : null}
           {user ? (
@@ -68,7 +68,7 @@ export const Nav = () => {
               Panel
             </NavLink>
           ) : null}
-          {user ? <button onClick={handleLogout}>Wyloguj</button> : null}
+          {user ? <button onClick={handleLogout}>Log out</button> : null}
         </div>
       </nav>
     </>
