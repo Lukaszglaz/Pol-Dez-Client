@@ -55,9 +55,8 @@ export const CategoryButtons: React.FC<CategoryButtonsProps> = ({
       >
         Siege Machines
       </button>
-      <p>
-        Click on an individual container containing a given hero, equipments,
-        heroes, or potion to display all the information.
+      <p className="selectStats__container-textMore">
+        Click on an individual container, of an item to see all the information.
       </p>
     </div>
   );

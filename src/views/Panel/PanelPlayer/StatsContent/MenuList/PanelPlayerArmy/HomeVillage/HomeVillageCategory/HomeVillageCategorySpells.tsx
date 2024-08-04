@@ -1,33 +1,25 @@
-import { usePanelInfo } from "../../../../../../../../contexts/panel.context";
 import { Spells, TROOPS } from "../../../../../../../../utils/data.util";
-import { TroopItem } from "../../TroopItem/TroopItem";
+import { SpellItem } from "../../Items/SpellItem";
 
 export const HomeVillageCategorySpells = () => {
-  const { player } = usePanelInfo();
-  if (!player) return null;
+  const elixirSpellsList = () => {
+    return TROOPS.homeVillage.Spells.elixirSpells.map((spell: Spells) => (
+      <SpellItem key={spell.name} item={spell} />
+    ));
+  };
 
-  const { spells } = player;
-
-  const isSpellActive = (spell: Spells): boolean => {
-    return spells.some((s) => s.name === spell.name);
+  const darkElixirSpellsList = () => {
+    return TROOPS.homeVillage.Spells.darkElixirSpells.map((spell: Spells) => (
+      <SpellItem key={spell.name} item={spell} />
+    ));
   };
 
   return (
     <div className="selectStats__render">
       <h2 className="selectStats__render-text">Spells</h2>
       <ul className="selectStats__render-list">
-        {TROOPS.homeVillage.elixirSpells.map((spell: Spells, index: number) => (
-          <TroopItem key={index} item={spell} isActive={isSpellActive(spell)} />
-        ))}
-        {TROOPS.homeVillage.darkElixirSpells.map(
-          (spell: Spells, index: number) => (
-            <TroopItem
-              key={index}
-              item={spell}
-              isActive={isSpellActive(spell)}
-            />
-          )
-        )}
+        {elixirSpellsList()}
+        {darkElixirSpellsList()}
       </ul>
     </div>
   );
