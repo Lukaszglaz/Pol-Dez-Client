@@ -68,7 +68,7 @@ export const Nav = () => {
               Panel
             </NavLink>
           ) : null}
-          {user ? <button onClick={handleLogout}>Log out</button> : null}
+          {user ? <button onClick={handleLogout}>Logout</button> : null}
         </div>
       </nav>
     </>
