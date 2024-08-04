@@ -3,7 +3,7 @@ export interface Hero {
   imgSource: string;
 }
 
-export interface HeroEquipment {
+export interface HeroEquipmentGroup {
   name: string;
   imgSource: string;
   equipment: Equipment[];
@@ -22,25 +22,41 @@ export interface Equipment {
 export interface Troop {
   name: string;
   imgSource: string;
-  isActive?: boolean;
   unlockBuilding?: string;
 }
 export interface Spells {
   name: string;
   imgSource: string;
-  isActive?: boolean;
+}
+
+export interface HeroBuilderBase {
+  name: string;
+  imgSource: string;
+}
+
+export interface TroopBuilderBase {
+  name: string;
+  imgSource: string;
 }
 
 export interface TroopsCategory {
   homeVillage: {
     heroes: Hero[];
-    heroEquipment: HeroEquipment[];
+    heroEquipmentGroups: HeroEquipmentGroup[];
     heroPets: HeroPets[];
-    elixirTroops: Troop[];
-    darkElixirTroops: Troop[];
-    superTroops: Troop[];
-    elixirSpells: Spells[];
-    darkElixirSpells: Spells[];
+    Troops: {
+      elixirTroops: Troop[];
+      darkElixirTroops: Troop[];
+      superTroops: Troop[];
+    };
+    Spells: {
+      elixirSpells: Spells[];
+      darkElixirSpells: Spells[];
+    };
+  };
+  builderBaseVillage: {
+    heroes: HeroBuilderBase[];
+    troops: TroopBuilderBase[];
   };
 }
 
@@ -64,7 +80,7 @@ export const TROOPS: TroopsCategory = {
         imgSource: "/img/Army/HomeVillageArmy/Heroes/RoyalChampion.png",
       },
     ],
-    heroEquipment: [
+    heroEquipmentGroups: [
       {
         name: "Archer Queen",
         imgSource: "/img/Army/HomeVillageArmy/Heroes/ArcherQueen.png",
@@ -247,316 +263,384 @@ export const TROOPS: TroopsCategory = {
         unlockBuilding: "Pet House",
       },
     ],
-    elixirTroops: [
+    Troops: {
+      elixirTroops: [
+        {
+          name: "Barbarian",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/ElixirTroops/Barbarian.webp",
+          unlockBuilding: "Barracks",
+        },
+        {
+          name: "Archer",
+          imgSource: "/img/Army/HomeVillageArmy/Troops/ElixirTroops/Archer.png",
+          unlockBuilding: "Barracks",
+        },
+        {
+          name: "Giant",
+          imgSource: "/img/Army/HomeVillageArmy/Troops/ElixirTroops/Giant.png",
+          unlockBuilding: "Barracks",
+        },
+        {
+          name: "Goblin",
+          imgSource: "/img/Army/HomeVillageArmy/Troops/ElixirTroops/Goblin.png",
+          unlockBuilding: "Barracks",
+        },
+        {
+          name: "Wall Breaker",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/ElixirTroops/WallBreaker.png",
+          unlockBuilding: "Barracks",
+        },
+        {
+          name: "Balloon",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/ElixirTroops/Balloon.png",
+          unlockBuilding: "Barracks",
+        },
+        {
+          name: "Wizard",
+          imgSource: "/img/Army/HomeVillageArmy/Troops/ElixirTroops/Wizard.png",
+          unlockBuilding: "Barracks",
+        },
+        {
+          name: "Healer",
+          imgSource: "/img/Army/HomeVillageArmy/Troops/ElixirTroops/Healer.png",
+          unlockBuilding: "Barracks",
+        },
+        {
+          name: "Dragon",
+          imgSource: "/img/Army/HomeVillageArmy/Troops/ElixirTroops/Dragon.png",
+          unlockBuilding: "Barracks",
+        },
+        {
+          name: "P.E.K.K.A",
+          imgSource: "/img/Army/HomeVillageArmy/Troops/ElixirTroops/Pekka.png",
+          unlockBuilding: "Barracks",
+        },
+        {
+          name: "Baby Dragon",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/ElixirTroops/BabyDragon.png",
+          unlockBuilding: "Barracks",
+        },
+        {
+          name: "Miner",
+          imgSource: "/img/Army/HomeVillageArmy/Troops/ElixirTroops/Miner.png",
+          unlockBuilding: "Barracks",
+        },
+        {
+          name: "Electro Dragon",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/ElixirTroops/ElectroDragon.png",
+          unlockBuilding: "Barracks",
+        },
+        {
+          name: "Yeti",
+          imgSource: "/img/Army/HomeVillageArmy/Troops/ElixirTroops/Yeti.png",
+          unlockBuilding: "Barracks",
+        },
+        {
+          name: "Dragon Rider",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/ElixirTroops/DragonRider.png",
+          unlockBuilding: "Barracks",
+        },
+        {
+          name: "Electro Titan",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/ElixirTroops/ElectroTitan.png",
+          unlockBuilding: "Barracks",
+        },
+        {
+          name: "Root Rider",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/ElixirTroops/RootRider.png",
+          unlockBuilding: "Barracks",
+        },
+      ],
+      darkElixirTroops: [
+        {
+          name: "Minion",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/DarkElixirTroops/Minion.png",
+          unlockBuilding: "Dark Barracks",
+        },
+        {
+          name: "Hog Rider",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/DarkElixirTroops/HogRider.png",
+          unlockBuilding: "Dark Barracks",
+        },
+        {
+          name: "Valkyrie",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/DarkElixirTroops/Valkyrie.webp",
+          unlockBuilding: "Dark Barracks",
+        },
+        {
+          name: "Golem",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/DarkElixirTroops/Golem.webp",
+          unlockBuilding: "Dark Barracks",
+        },
+        {
+          name: "Witch",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/DarkElixirTroops/Witch.webp",
+          unlockBuilding: "Dark Barracks",
+        },
+        {
+          name: "Lava Hound",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/DarkElixirTroops/LavaHound.webp",
+          unlockBuilding: "Dark Barracks",
+        },
+        {
+          name: "Bowler",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/DarkElixirTroops/Bowler.webp",
+          unlockBuilding: "Dark Barracks",
+        },
+        {
+          name: "Ice Golem",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/DarkElixirTroops/IceGolem.webp",
+          unlockBuilding: "Dark Barracks",
+        },
+        {
+          name: "Headhunter",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/DarkElixirTroops/HeadHunter.webp",
+          unlockBuilding: "Dark Barracks",
+        },
+        {
+          name: "Apprentice Warden",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/DarkElixirTroops/ApprenticeWarden.webp",
+          unlockBuilding: "Dark Barracks",
+        },
+        {
+          name: "Druid",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/DarkElixirTroops/Druid.png",
+          unlockBuilding: "Dark Barracks",
+        },
+      ],
+      superTroops: [
+        {
+          name: "Super Barbarian",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/SuperTroops/SuperBarbarian.png",
+        },
+        {
+          name: "Super Archer",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/SuperTroops/SuperArcher.webp",
+        },
+        {
+          name: "Super Giant",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/SuperTroops/SuperGiant.png",
+        },
+        {
+          name: "Sneaky Goblin",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/SuperTroops/SneakyGoblin.png",
+        },
+        {
+          name: "Super Wall Breaker",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/SuperTroops/SuperWallBreaker.png",
+        },
+        {
+          name: "Rocket Balloon",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/SuperTroops/RocketBalloon.png",
+        },
+        {
+          name: "Super Wizard",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/SuperTroops/SuperWizard.png",
+        },
+        {
+          name: "Super Dragon",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/SuperTroops/SuperDragon.webp",
+        },
+        {
+          name: "Inferno Dragon",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/SuperTroops/InfernoDragon.webp",
+        },
+        {
+          name: "Super Minion",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/SuperTroops/SuperMinion.png",
+        },
+        {
+          name: "Super Valkyrie",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/SuperTroops/SuperValkyrie.png",
+        },
+        {
+          name: "Super Witch",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/SuperTroops/SuperWitch.png",
+        },
+        {
+          name: "Ice Hound",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/SuperTroops/IceHound.webp",
+        },
+        {
+          name: "Super Bowler",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/SuperTroops/SuperBowler.webp",
+        },
+        {
+          name: "Super Miner",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/SuperTroops/SuperMiner.webp",
+        },
+        {
+          name: "Super Hog Rider",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Troops/SuperTroops/SuperHogRider.webp",
+        },
+      ],
+    },
+    Spells: {
+      elixirSpells: [
+        {
+          name: "Lightning Spell",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Spells/ElixirSpells/LightningSpell.webp",
+        },
+        {
+          name: "Healing Spell",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Spells/ElixirSpells/HealingSpell.png",
+        },
+        {
+          name: "Rage Spell",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Spells/ElixirSpells/RageSpell.png",
+        },
+        {
+          name: "Jump Spell",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Spells/ElixirSpells/JumpSpell.png",
+        },
+        {
+          name: "Freeze Spell",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Spells/ElixirSpells/FreezeSpell.png",
+        },
+        {
+          name: "Clone Spell",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Spells/ElixirSpells/CloneSpell.png",
+        },
+        {
+          name: "Invisibility Spell",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Spells/ElixirSpells/InvisibilitySpell.png",
+        },
+        {
+          name: "Recall Spell",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Spells/ElixirSpells/RecallSpell.png",
+        },
+      ],
+      darkElixirSpells: [
+        {
+          name: "Poison Spell",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Spells/DarkElixirSpells/PoisonSpell.png",
+        },
+        {
+          name: "Earthquake Spell",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Spells/DarkElixirSpells/EarthQuakeSpell.png",
+        },
+        {
+          name: "Haste Spell",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Spells/DarkElixirSpells/HasteSpell.png",
+        },
+        {
+          name: "Bat Spell",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Spells/DarkElixirSpells/BatSpell.png",
+        },
+        {
+          name: "Overgrowth Spell",
+          imgSource:
+            "/img/Army/HomeVillageArmy/Spells/DarkElixirSpells/OverGrowthSpell.png",
+        },
+      ],
+    },
+  },
+  builderBaseVillage: {
+    heroes: [
       {
-        name: "Barbarian",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Troops/ElixirTroops/Barbarian.webp",
-        unlockBuilding: "Barracks",
+        name: "Battle Copter",
+        imgSource: "/img/Army/BuilderBaseArmy/Heroes/BattleCopter.webp",
       },
       {
-        name: "Archer",
-        imgSource: "/img/Army/HomeVillageArmy/Troops/ElixirTroops/Archer.png",
-        unlockBuilding: "Barracks",
+        name: "Battle Machine",
+        imgSource: "/img/Army/BuilderBaseArmy/Heroes/BattleMachine.webp",
+      },
+    ],
+    troops: [
+      {
+        name: "Raged Barbarian",
+        imgSource: "/img/Army/BuilderBaseArmy/Troops/RagedBarbarian.webp",
       },
       {
-        name: "Giant",
-        imgSource: "/img/Army/HomeVillageArmy/Troops/ElixirTroops/Giant.png",
-        unlockBuilding: "Barracks",
+        name: "Sneaky Archer",
+        imgSource: "/img/Army/BuilderBaseArmy/Troops/SnekayArcher.png",
       },
       {
-        name: "Goblin",
-        imgSource: "/img/Army/HomeVillageArmy/Troops/ElixirTroops/Goblin.png",
-        unlockBuilding: "Barracks",
+        name: "Boxer Giant",
+        imgSource: "/img/Army/BuilderBaseArmy/Troops/BoxerGiant.png",
       },
       {
-        name: "Wall Breaker",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Troops/ElixirTroops/WallBreaker.png",
-        unlockBuilding: "Barracks",
+        name: "Beta Minion",
+        imgSource: "/img/Army/BuilderBaseArmy/Troops/BetaMinion.png",
       },
       {
-        name: "Balloon",
-        imgSource: "/img/Army/HomeVillageArmy/Troops/ElixirTroops/Balloon.png",
-        unlockBuilding: "Barracks",
-      },
-      {
-        name: "Wizard",
-        imgSource: "/img/Army/HomeVillageArmy/Troops/ElixirTroops/Wizard.png",
-        unlockBuilding: "Barracks",
-      },
-      {
-        name: "Healer",
-        imgSource: "/img/Army/HomeVillageArmy/Troops/ElixirTroops/Healer.png",
-        unlockBuilding: "Barracks",
-      },
-      {
-        name: "Dragon",
-        imgSource: "/img/Army/HomeVillageArmy/Troops/ElixirTroops/Dragon.png",
-        unlockBuilding: "Barracks",
-      },
-      {
-        name: "P.E.K.K.A",
-        imgSource: "/img/Army/HomeVillageArmy/Troops/ElixirTroops/Pekka.png",
-        unlockBuilding: "Barracks",
+        name: "Bomber",
+        imgSource: "/img/Army/BuilderBaseArmy/Troops/Bomber.png",
       },
       {
         name: "Baby Dragon",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Troops/ElixirTroops/BabyDragon.png",
-        unlockBuilding: "Barracks",
+        imgSource: "/img/Army/BuilderBaseArmy/Troops/BabyDragon.webp",
       },
       {
-        name: "Miner",
-        imgSource: "/img/Army/HomeVillageArmy/Troops/ElixirTroops/Miner.png",
-        unlockBuilding: "Barracks",
+        name: "Cannon Cart",
+        imgSource: "/img/Army/BuilderBaseArmy/Troops/CannonCart.png",
       },
       {
-        name: "Electro Dragon",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Troops/ElixirTroops/ElectroDragon.png",
-        unlockBuilding: "Barracks",
+        name: "Night Witch",
+        imgSource: "/img/Army/BuilderBaseArmy/Troops/NightWith.webp",
       },
       {
-        name: "Yeti",
-        imgSource: "/img/Army/HomeVillageArmy/Troops/ElixirTroops/Yeti.png",
-        unlockBuilding: "Barracks",
+        name: "Drop Ship",
+        imgSource: "/img/Army/BuilderBaseArmy/Troops/DropShip.webp",
       },
       {
-        name: "Dragon Rider",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Troops/ElixirTroops/DragonRider.png",
-        unlockBuilding: "Barracks",
+        name: "Power P.E.K.K.A",
+        imgSource: "/img/Army/BuilderBaseArmy/Troops/PowerPekka.png",
       },
       {
-        name: "Electro Titan",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Troops/ElixirTroops/ElectroTitan.png",
-        unlockBuilding: "Barracks",
+        name: "Hog Glider",
+        imgSource: "/img/Army/BuilderBaseArmy/Troops/HogGlider.webp",
       },
       {
-        name: "Root Rider",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Troops/ElixirTroops/RootRider.png",
-        unlockBuilding: "Barracks",
-      },
-    ],
-    darkElixirTroops: [
-      {
-        name: "Minion",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Troops/DarkElixirTroops/Minion.png",
-        unlockBuilding: "Dark Barracks",
-      },
-      {
-        name: "Hog Rider",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Troops/DarkElixirTroops/HogRider.png",
-        unlockBuilding: "Dark Barracks",
-      },
-      {
-        name: "Valkyrie",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Troops/DarkElixirTroops/Valkyrie.webp",
-        unlockBuilding: "Dark Barracks",
-      },
-      {
-        name: "Golem",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Troops/DarkElixirTroops/Golem.webp",
-        unlockBuilding: "Dark Barracks",
-      },
-      {
-        name: "Witch",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Troops/DarkElixirTroops/Witch.webp",
-        unlockBuilding: "Dark Barracks",
-      },
-      {
-        name: "Lava Hound",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Troops/DarkElixirTroops/LavaHound.webp",
-        unlockBuilding: "Dark Barracks",
-      },
-      {
-        name: "Bowler",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Troops/DarkElixirTroops/Bowler.webp",
-        unlockBuilding: "Dark Barracks",
-      },
-      {
-        name: "Ice Golem",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Troops/DarkElixirTroops/IceGolem.webp",
-        unlockBuilding: "Dark Barracks",
-      },
-      {
-        name: "Headhunter",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Troops/DarkElixirTroops/HeadHunter.webp",
-        unlockBuilding: "Dark Barracks",
-      },
-      {
-        name: "Apprentice Warden",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Troops/DarkElixirTroops/ApprenticeWarden.webp",
-        unlockBuilding: "Dark Barracks",
-      },
-      {
-        name: "Druid",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Troops/DarkElixirTroops/Druid.png",
-        unlockBuilding: "Dark Barracks",
-      },
-    ],
-    superTroops: [
-      {
-        name: "Super Barbarian",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Troops/SuperTroops/SuperBarbarian.png",
-      },
-      {
-        name: "Super Archer",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Troops/SuperTroops/SuperArcher.webp",
-      },
-      {
-        name: "Super Giant",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Troops/SuperTroops/SuperGiant.png",
-      },
-      {
-        name: "Sneaky Goblin",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Troops/SuperTroops/SneakyGoblin.png",
-      },
-      {
-        name: "Super Wall Breaker",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Troops/SuperTroops/SuperWallBreaker.png",
-      },
-      {
-        name: "Rocket Balloon",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Troops/SuperTroops/RocketBalloon.png",
-      },
-      {
-        name: "Super Wizard",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Troops/SuperTroops/SuperWizard.png",
-      },
-      {
-        name: "Super Dragon",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Troops/SuperTroops/SuperDragon.webp",
-      },
-      {
-        name: "Inferno Dragon",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Troops/SuperTroops/InfernoDragon.webp",
-      },
-      {
-        name: "Super Minion",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Troops/SuperTroops/SuperMinion.png",
-      },
-      {
-        name: "Super Valkyrie",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Troops/SuperTroops/SuperValkyrie.png",
-      },
-      {
-        name: "Super Witch",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Troops/SuperTroops/SuperWitch.png",
-      },
-      {
-        name: "Ice Hound",
-        imgSource: "/img/Army/HomeVillageArmy/Troops/SuperTroops/IceHound.webp",
-      },
-      {
-        name: "Super Bowler",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Troops/SuperTroops/SuperBowler.webp",
-      },
-      {
-        name: "Super Miner",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Troops/SuperTroops/SuperMiner.webp",
-      },
-      {
-        name: "Super Hog Rider",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Troops/SuperTroops/SuperHogRider.webp",
-      },
-    ],
-    elixirSpells: [
-      {
-        name: "Lightning Spell",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Spells/ElixirSpells/LightningSpell.webp",
-      },
-      {
-        name: "Healing Spell",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Spells/ElixirSpells/HealingSpell.png",
-      },
-      {
-        name: "Rage Spell",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Spells/ElixirSpells/RageSpell.png",
-      },
-      {
-        name: "Jump Spell",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Spells/ElixirSpells/JumpSpell.png",
-      },
-      {
-        name: "Freeze Spell",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Spells/ElixirSpells/FreezeSpell.png",
-      },
-      {
-        name: "Clone Spell",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Spells/ElixirSpells/CloneSpell.png",
-      },
-      {
-        name: "Invisibility Spell",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Spells/ElixirSpells/InvisibilitySpell.png",
-      },
-      {
-        name: "Recall Spell",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Spells/ElixirSpells/RecallSpell.png",
-      },
-    ],
-    darkElixirSpells: [
-      {
-        name: "Poison Spell",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Spells/DarkElixirSpells/PoisonSpell.png",
-      },
-      {
-        name: "Earthquake Spell",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Spells/DarkElixirSpells/EarthQuakeSpell.png",
-      },
-      {
-        name: "Haste Spell",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Spells/DarkElixirSpells/HasteSpell.png",
-      },
-      {
-        name: "Bat Spell",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Spells/DarkElixirSpells/BatSpell.png",
-      },
-      {
-        name: "Overgrowth Spell",
-        imgSource:
-          "/img/Army/HomeVillageArmy/Spells/DarkElixirSpells/OverGrowthSpell.png",
+        name: "Electrofire Wizard",
+        imgSource: "/img/Army/BuilderBaseArmy/Troops/ElectrofiteWizard.png",
       },
     ],
   },
