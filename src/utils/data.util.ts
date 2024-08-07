@@ -600,7 +600,7 @@ export const TROOPS: TroopsCategory = {
       },
       {
         name: "Sneaky Archer",
-        imgSource: "/img/Army/BuilderBaseArmy/Troops/SnekayArcher.png",
+        imgSource: "/img/Army/BuilderBaseArmy/Troops/SneakyArcher.png",
       },
       {
         name: "Boxer Giant",
@@ -624,7 +624,7 @@ export const TROOPS: TroopsCategory = {
       },
       {
         name: "Night Witch",
-        imgSource: "/img/Army/BuilderBaseArmy/Troops/NightWith.webp",
+        imgSource: "/img/Army/BuilderBaseArmy/Troops/NightWitch.webp",
       },
       {
         name: "Drop Ship",
@@ -640,7 +640,7 @@ export const TROOPS: TroopsCategory = {
       },
       {
         name: "Electrofire Wizard",
-        imgSource: "/img/Army/BuilderBaseArmy/Troops/ElectrofiteWizard.png",
+        imgSource: "/img/Army/BuilderBaseArmy/Troops/ElectrofireWizard.png",
       },
     ],
   },

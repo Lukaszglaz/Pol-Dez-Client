@@ -1,3 +1,5 @@
+import { BuilderBaseVillageSelectTroops } from "./BuilderBaseVillageSelectTroops";
+
 export const BuilderBaseVillageTroops = () => {
-  return <h2>ss</h2>;
+  return <BuilderBaseVillageSelectTroops />;
 };
