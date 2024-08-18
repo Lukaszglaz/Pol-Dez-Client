@@ -1,5 +1,8 @@
 import { usePanelInfo } from "../../../../../../../contexts/panel.context";
 
+import machineBuilderImage from "/img/Summary/ArmyBs/LevelLeft/hero-3.png";
+import copterBuilderImage from "/img/Summary/ArmyBs/LevelLeft/hero-5.webp";
+
 export const ArmyHeroesBuilderVillage = () => {
   const player = usePanelInfo().player;
   if (!player) return;
@@ -66,7 +69,7 @@ export const ArmyHeroesBuilderVillage = () => {
       <div className="profile-content__summary-containerArmy__levelLeft">
         <div className="levelLeft__container">
           <img
-            src="/img/Summary/ArmyBs/LevelLeft/hero-3.png"
+            src={machineBuilderImage}
             alt="Machine builder image"
             className="levelLeft__container-image"
           />
@@ -76,7 +79,7 @@ export const ArmyHeroesBuilderVillage = () => {
         </div>
         <div className="levelLeft__container">
           <img
-            src="/img/Summary/ArmyBs/LevelLeft/hero-5.webp"
+            src={copterBuilderImage}
             alt="Copter builder image"
             className="levelLeft__container-image"
           />

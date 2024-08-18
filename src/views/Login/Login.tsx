@@ -8,6 +8,8 @@ import { useUser } from "../../contexts/user.context";
 import { setLocalStorage } from "../../utils/localStorage";
 import { LoginResponse } from "../../types/auth";
 import { callApi } from "../../utils/api";
+
+import cocLoading from "/img/coc_loading_one.jpeg";
 export const Login = () => {
   const { setUser } = useUser();
 
@@ -90,10 +92,7 @@ export const Login = () => {
           <h2 className="login__title">Images from Clash Of Clans game</h2>
 
           <div className="image-coc">
-            <img
-              src="../public/img/coc_loading_one.jpeg"
-              alt="Clash of Clans loading page."
-            />
+            <img src={cocLoading} alt="Clash of Clans loading page." />
           </div>
         </div>
       </div>

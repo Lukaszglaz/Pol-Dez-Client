@@ -1,5 +1,10 @@
 import { usePanelInfo } from "../../../../../../../contexts/panel.context";
 
+import heroImage from "/img/Summary/ArmyTh/LevelLeft/hero-0.png";
+import archerImage from "/img/Summary/ArmyTh/LevelLeft/hero-1.webp";
+import wardenImage from "/img/Summary/ArmyTh/LevelLeft/hero-2.png";
+import championImage from "/img/Summary/ArmyTh/LevelLeft/hero-3.webp";
+
 export const ArmyHeroesHomeVillage = () => {
   const player = usePanelInfo().player;
   if (!player) return;
@@ -59,23 +64,23 @@ export const ArmyHeroesHomeVillage = () => {
       <div className="profile-content__summary-containerArmy__levelLeft">
         <div className="levelLeft__container">
           <img
-            src="/img/Summary/ArmyTh/LevelLeft/hero-0.png"
-            alt="Archer image"
+            src={heroImage}
+            alt="Hero image"
             className="levelLeft__container-image"
           />
           <div className="levelLeft__container-statLeft">+ {heroLeft}</div>
         </div>
         <div className="levelLeft__container">
           <img
-            src="/img/Summary/ArmyTh/LevelLeft/hero-1.webp"
-            alt="Hero"
+            src={archerImage}
+            alt="Archer Image"
             className="levelLeft__container-image"
           />
           <div className="levelLeft__container-statLeft">+ {archerLeft}</div>
         </div>
         <div className="levelLeft__container">
           <img
-            src="/img/Summary/ArmyTh/LevelLeft/hero-2.png"
+            src={wardenImage}
             alt="Warden image"
             className="levelLeft__container-image"
           />
@@ -83,7 +88,7 @@ export const ArmyHeroesHomeVillage = () => {
         </div>
         <div className="levelLeft__container">
           <img
-            src="/img/Summary/ArmyTh/LevelLeft/hero-3.webp"
+            src={championImage}
             alt="Champion image"
             className="levelLeft__container-image"
           />

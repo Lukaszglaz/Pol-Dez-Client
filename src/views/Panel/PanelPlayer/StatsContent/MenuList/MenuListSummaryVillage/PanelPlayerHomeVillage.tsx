@@ -1,6 +1,8 @@
 import { usePanelInfo } from "../../../../../../contexts/panel.context";
 import { ArmyHeroesHomeVillage } from "./ArmyHeroesHomeVillage/ArmyHeroesHomeVillage";
-
+import heroImage from "/img/Summary/ArmyTh/hero-0.png";
+import troopImage from "/img/Summary/ArmyTh/troop-0.webp";
+import spellImage from "/img/Summary/ArmyTh/spell-0.png";
 export const PanelPlayerHomeVillage = () => {
   const player = usePanelInfo().player;
   if (!player) return;
@@ -48,7 +50,7 @@ export const PanelPlayerHomeVillage = () => {
           <div className="profile-content__summary-home__image">
             <img
               className="profile-content__summary-home__image"
-              src="/public/img/summary/armyth/hero-0.png"
+              src={heroImage}
               alt="Hero Image"
             />
           </div>
@@ -58,7 +60,7 @@ export const PanelPlayerHomeVillage = () => {
           <div className="profile-content__summary-home__image">
             <img
               className="profile-content__summary-home__image"
-              src="/public/img/summary/armyth/troop-0.webp"
+              src={troopImage}
               alt="Troops image"
             />
           </div>
@@ -88,7 +90,7 @@ export const PanelPlayerHomeVillage = () => {
           <div className="profile-content__summary-home__image">
             <img
               className="profile-content__summary-home__image"
-              src="/public/img/summary/armyth/spell-0.png"
+              src={spellImage}
               alt="Spells image"
             />
           </div>

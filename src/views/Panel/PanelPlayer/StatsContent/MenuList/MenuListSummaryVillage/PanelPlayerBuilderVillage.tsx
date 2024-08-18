@@ -1,6 +1,9 @@
 import { usePanelInfo } from "../../../../../../contexts/panel.context";
 import { ArmyHeroesBuilderVillage } from "./ArmyHeroesBuilderVillage/ArmyHeroesBuilderVillage";
 
+import heroImage from "/img/Summary/ArmyBs/hero-3.png";
+import troopImage from "/img/Summary/ArmyBs/troop-19.png";
+
 export const PanelPlayerBuilderVillage = () => {
   const player = usePanelInfo().player;
   if (!player) return;
@@ -34,7 +37,7 @@ export const PanelPlayerBuilderVillage = () => {
           <div className="profile-content__summary-home__image">
             <img
               className="profile-content__summary-home__image"
-              src="/public/img/summary/armybs/hero-3.png"
+              src={heroImage}
               alt="Builder hero image"
             />
           </div>
@@ -44,7 +47,7 @@ export const PanelPlayerBuilderVillage = () => {
           <div className="profile-content__summary-home__image">
             <img
               className="profile-content__summary-home__image"
-              src="/public/img/summary/armybs/troop-19.png"
+              src={troopImage}
               alt="Troops image"
             />
           </div>

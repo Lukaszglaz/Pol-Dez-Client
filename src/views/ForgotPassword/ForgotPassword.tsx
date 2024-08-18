@@ -3,6 +3,8 @@ import { Method } from "../../types";
 import { callApi } from "../../utils/api";
 import { toast } from "react-toastify";
 
+import cocLoading from "/img/coc_loading_one.jpeg";
+
 export const ForgotPassword = () => {
   const [email, setEmail] = useState("");
 
@@ -50,10 +52,7 @@ export const ForgotPassword = () => {
         <h2 className="forgot__title">Images from Clash Of Clans game</h2>
 
         <div className="image-coc">
-          <img
-            src="../public/img/coc_loading_one.jpeg"
-            alt="Clash of Clans loading page."
-          />
+          <img src={cocLoading} alt="Clash of Clans loading page." />
         </div>
       </div>
     </div>

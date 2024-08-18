@@ -1,5 +1,7 @@
 import { usePanelInfo } from "../../../../contexts/panel.context";
 
+import royalChampionPose03 from "/img/RoyalChampion_Pose03.png";
+
 export const PanelPlayerBaner = () => {
   const player = usePanelInfo().player;
   if (!player) return;
@@ -28,7 +30,7 @@ export const PanelPlayerBaner = () => {
     <div className="profile-card">
       <div className="profile-card__picture">
         <img
-          src="/img/RoyalChampion_Pose03.png"
+          src={royalChampionPose03}
           alt="Profile Pose 01"
           className="profile-card__picture-img"
         />
