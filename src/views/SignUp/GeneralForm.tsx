@@ -23,7 +23,7 @@ export const GeneralForm = () => {
         <form onSubmit={handleSubmit}>
           <h2 className="signup__title">Sign up for an account</h2>
           <label className="signup__label">
-            Name
+            First Name
             <input
               className="signup__input"
               type="text"
