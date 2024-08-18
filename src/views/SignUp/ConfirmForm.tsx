@@ -39,7 +39,10 @@ export const ConfirmForm = () => {
 
     // Mozna to zastąpić toastify chodzi o /complete-signup a za to zmaienic sciezke na /login i wyzej uzyc toastify
     // Przenoszenie po rejestracji na potwierdzenie loginu
-    if (response.status) return navigate("/complete-signup");
+    if (response.status) {
+      navigate("/complete-signup");
+      toast.success("Your account has been successfully created.");
+    }
   };
   return (
     <>
