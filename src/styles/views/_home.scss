@@ -132,6 +132,7 @@
     .container__last_bx {
       position: relative;
       overflow: hidden;
+      margin-bottom: 20px;
       @media (min-width: 1000px) {
         display: flex;
         justify-content: space-between;
