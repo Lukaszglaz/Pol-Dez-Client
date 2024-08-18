@@ -2,12 +2,10 @@
 import { Dispatch, SetStateAction } from "react";
 import { Modal } from "../common/Modal/Modal";
 import { usePanelInfo } from "../../contexts/panel.context";
-import { HeroEquipmentGroup } from "../../utils/data.util";
 
 interface Props {
   setShowModal: Dispatch<SetStateAction<boolean>>;
   name: string;
-  equipment: HeroEquipmentGroup;
 }
 
 export const HeroModal = ({ setShowModal, name }: Props) => {
