@@ -38,7 +38,16 @@ export const Home = () => {
               </ul>
             </div>
             <div className="container__aside_block">
-              <h2>W trakcie Budowy</h2>
+              <h2>Key Features of the Application:</h2>
+              <ul>
+                <li>User sign-up and authentication module</li>
+                <li>Access to the roster of players curated by the admin</li>
+                <li>Detailed player and clan performance metrics</li>
+                <li>Administrator-level clan administration tools</li>
+                <li>
+                  Advanced security protocols for user data and authentication
+                </li>
+              </ul>
             </div>
           </div>
           <h3>
