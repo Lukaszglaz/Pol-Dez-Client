@@ -35,7 +35,7 @@ export async function callApi<T>(
     };
   } catch (error) {
     return {
-      message: "Wystąpił błąd, spróboj ponownie później",
+      message: "An error occurred, please try again later.",
       status: false,
     };
   }
